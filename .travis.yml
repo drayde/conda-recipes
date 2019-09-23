@@ -11,11 +11,11 @@ deploy:
   skip_cleanup: true
   keep_history: true
   file_glob: true
-  file: /Users/travis/miniconda/conda-bld/**/*.bz2
+  file: /Users/travis/miniconda/conda-bld/**/libftdi-*.bz2
   on:
     branch: 
       # Release tags
-      - /^v\d+\.\d+/
+      - /^v\d+\.\d+-\d+/
       - build_on_travis
             
 script:
