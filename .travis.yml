@@ -13,7 +13,10 @@ deploy:
   file_glob: true
   file: ./**/*.bz2
   on:
-    branch: build_on_travis
+    branch: 
+      # Release tags
+      - /^v\d+\.\d+/
+      - build_on_travis
             
 script:
   source ./.travis_scripts/build_all;
