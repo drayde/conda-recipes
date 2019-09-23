@@ -10,6 +10,7 @@ deploy:
   api_key: $GH_TOKEN  # Set in the settings page of Travis, as a secure variable
   skip_cleanup: true
   keep_history: true
+  file_glob: true
   file: ./**/*.bz2
   on:
     branch: build_on_travis
