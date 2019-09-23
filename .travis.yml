@@ -5,11 +5,15 @@ jobs:
   include:
     - os: osx
 
-env:
-    global:
-        # Add the BINSTAR_TOKEN environment variable. (This is the "CI_upload2" token in anaconda.org web UI)
-        #- secure: "" 
-        
+deploy:
+  provider: releases
+  github_token: $GH_TOKEN  # Set in the settings page of Travis, as a secure variable
+  skip_cleanup: true
+  keep_history: true
+  file: **/*.bz2
+  on:
+    branch: build_on_travis
+            
 script:
     - source ./.travis_scripts/build_all;
       
