@@ -7,7 +7,7 @@ jobs:
 
 deploy:
   provider: releases
-  github_token: $GH_TOKEN  # Set in the settings page of Travis, as a secure variable
+  api_key: $GH_TOKEN  # Set in the settings page of Travis, as a secure variable
   skip_cleanup: true
   keep_history: true
   file: ./**/*.bz2
