@@ -3,17 +3,17 @@ language: generic
 
 jobs:
   include:
-    - os: osx
+    os: osx
 
 deploy:
   provider: releases
   github_token: $GH_TOKEN  # Set in the settings page of Travis, as a secure variable
   skip_cleanup: true
   keep_history: true
-  file: **/*.bz2
+  file: ./**/*.bz2
   on:
     branch: build_on_travis
             
 script:
-    - source ./.travis_scripts/build_all;
+  source ./.travis_scripts/build_all;
       
