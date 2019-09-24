@@ -11,7 +11,7 @@ deploy:
   skip_cleanup: true
   keep_history: true
   file_glob: true
-  file: /Users/travis/miniconda/conda-bld/**/libftdi1-*.bz2
+  file: /Users/travis/miniconda/conda-bld/**/libftdi1-*-*.bz2
   on:
     branch: 
       # Release tags
