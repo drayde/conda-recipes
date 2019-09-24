@@ -1,6 +1,6 @@
 package:
-  name: libftdi
-  version: 1.3
+  name: libftdi1
+  version: 3
 
 source:
   fn:   libftdi1-1.3.tar.bz2
@@ -13,7 +13,7 @@ build:
   number: 0
   skip: true  # [not osx]
   run_exports:
-    - {{ pin_subpackage('libftdi') }}
+    - {{ pin_subpackage('libftdi1') }}
     
 requirements:
   build:
@@ -28,8 +28,8 @@ requirements:
 
 test:
   commands:
-    - conda inspect linkages -p $PREFIX libftdi     # [unix]
-    - conda inspect objects -p $PREFIX libftdi      # [osx]
+    - conda inspect linkages -p $PREFIX libftdi1     # [unix]
+    - conda inspect objects -p $PREFIX libftdi1      # [osx]
     
 about:
   home: https://www.intra2net.com/en/developer/libftdi/
