@@ -15,7 +15,7 @@ deploy:
   on:
     branch: 
       # Release tags
-      - /^v\d+\.\d+-\d+/
+      - /^v\d+\.\d+\-\d+/
       - build_on_travis
             
 script:
